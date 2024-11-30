@@ -15,7 +15,7 @@ if [ "$sum" -ne 100 ]; then
 	exit 1
 fi
 
-fhalhflkda
+fhala
 
 
 
