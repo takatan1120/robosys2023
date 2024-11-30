@@ -1,21 +1,22 @@
 #!/bin/bash
 
-echo "晴れ、雨、曇りの天気の確立を入力(Ex.50 30 20):"
-read -r probabilities
+read input
 
-IFS=' ' read -r -a probs <<< "$probabilities"
+A=$(echo $input | sed 's/A=//')
 
-sum=0
-for prob in "${probs[@]}"; do
-	sum=$((sum + prob))
-done
-
-if [ "$sum" -ne 100 ]; then
-	echo "確率の合計が100でない"
+if ! [[ "$A" =~ ^[0-9]+$ ]]; then
 	exit 1
 fi
 
-a
+weather=("晴れ" "曇り" "雨")
+
+for ((i=1; i<=A; i++))
+do
+
+	random_weather=${weather[RANDOM % ${#weather[@]}]}
+
+	echo "Day $i: 天気 = $random_weater"
+done
 
 
 
