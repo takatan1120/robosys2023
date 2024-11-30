@@ -5,7 +5,7 @@ read input
 A=$(echo $input | sed 's/A=//')
 
 if ! [[ "$A" =~ ^[0-9]+$ ]]; then
-	exit 1
+	exit
 fi
 
 weather=("晴れ" "曇り" "雨")
