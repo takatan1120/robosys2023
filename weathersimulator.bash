@@ -1,4 +1,5 @@
 #!/bin/bash
+# SPDX-FileCopyrightText: 2024 Takanosuke Fukasawa
 
 read input
 
