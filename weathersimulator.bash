@@ -1,9 +1,20 @@
 #!/bin/bash
 
-import random
+echo "晴れ、雨、曇りの天気の確立を入力(Ex.50 30 20):"
+read -r probabilities
 
-#　標準入力から天気の確立を読み込む
-print("晴れ、雨、曇りの天気の確率を入力(Ex.50 30 20):")
-probabilities = list(map(int, input().split()))
+IFS=' ' read -r -a probs <<< "$probabilities"
+
+sum=0
+for prob in "${probs[@]}"; do
+	sum=$((sum + prob))
+done
+
+if [ "$sum" -ne 100 ]; then
+	echo "確率の合計が100でない"
+	exit 1
+fi
+
+
 
 
