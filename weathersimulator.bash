@@ -15,7 +15,7 @@ do
 
 	random_weather=${weather[RANDOM % ${#weather[@]}]}
 
-	echo "Day $i: 天気 = $random_weater"
+	echo "Day $i: 天気 = $random_weather"
 done
 
 
