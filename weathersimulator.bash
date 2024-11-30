@@ -1,5 +1,6 @@
 #!/bin/bash
 # SPDX-FileCopyrightText: 2024 Takanosuke Fukasawa
+# SPDX-License-Identifier: GPL-3.0-only
 
 read input
 
