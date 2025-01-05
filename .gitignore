@@ -1,0 +1,8 @@
+# ビルド、インストール、ログディレクトリを無視
+/build/
+/install/
+/log/
+
+# Pythonのキャッシュを無視
+*.pyc
+__pycache__/
